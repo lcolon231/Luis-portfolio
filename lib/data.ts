@@ -64,7 +64,7 @@ export const projects: Project[] = [
       "A web-based security audit tool that scans a company domain for real external vulnerabilities: email authentication gaps (SPF/DKIM/DMARC), SSL/TLS misconfigurations, exposed ports, HTTP header weaknesses, and DNS hygiene issues. Calculates a weighted risk score and generates a branded PDF report — giving SMBs actionable security intelligence without hiring a consultant. Built as a lead-gen tool for NodeLink Technologies MSP prospects.",
     tech: ["Next.js", "TypeScript", "Node.js", "DNS Lookups", "PDF Generation", "REST API"],
     githubUrl: "https://github.com/lcolon231/nodelink-security-scanner",
-    liveUrl: "https://scanner.nodelinktechnologies.com",
+    liveUrl: "https://nodelink-security-scanner.vercel.app/",
     featured: true,
   },
   {
