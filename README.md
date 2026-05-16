@@ -7,7 +7,7 @@
 
 My personal portfolio site — a modern, dark-mode, fully responsive showcase of projects, skills, and experience built with the latest web stack.
 
-🔗 **Live site:** [luis-portfolio.vercel.app](https://luis-portfolio.vercel.app)
+🔗 **Live site:** [https://luis-portfolio-three.vercel.app/](https://luis-portfolio-three.vercel.app/)
 
 ---
 
@@ -63,7 +63,7 @@ A blockchain-based audit logging system that gives small businesses an immutable
 
 ```bash
 # Clone
-git clone https://github.com/yourusername/luis-portfolio.git
+git clone https://github.com/lcolon231/luis-portfolio.git
 cd luis-portfolio
 
 # Install
