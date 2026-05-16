@@ -1,13 +1,75 @@
 # Luis Alberto Colón — Portfolio
 
-Personal portfolio built with **Next.js 15**, **TypeScript**, and **Tailwind CSS**.
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed-Vercel-black?logo=vercel)](https://vercel.com)
+
+My personal portfolio site — a modern, dark-mode, fully responsive showcase of projects, skills, and experience built with the latest web stack.
+
+🔗 **Live site:** [luis-portfolio.vercel.app](https://luis-portfolio.vercel.app)
 
 ---
 
-## Local Development
+## About
+
+I'm a software developer and IT professional finishing my Master's in Information Technology at the University of West Florida. I founded [NodeLink Technologies LLC](https://nodelinktechnologies.com), an MSP serving small businesses and medical offices in the Tampa Bay area.
+
+This site is both a portfolio and a working example of how I build things: practical, well-structured, and shipped end-to-end.
+
+---
+
+## Features
+
+- 🎨 Modern dark-mode design with purple accent and smooth scroll animations
+- 📱 Fully responsive across mobile, tablet, and desktop
+- ⚡ Static-generated for fast load times (~113 KB first load JS)
+- 📬 Working contact form via Formspree
+- 🔍 SEO-optimized with sitemap, robots.txt, and OpenGraph metadata
+- ♿ Semantic HTML and keyboard-navigable
+- 🧹 Single-file content management — edit everything from `lib/data.ts`
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Framework | Next.js 15 (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS + CSS variables |
+| Icons | Lucide React |
+| Forms | @formspree/react |
+| Hosting | Vercel |
+| CI/CD | Auto-deploy via GitHub integration |
+
+---
+
+## Featured Projects
+
+### 🔒 NodeLink SMB Security Posture Scanner
+A web-based security audit tool that scans company domains for external vulnerabilities (SPF/DKIM/DMARC, SSL/TLS, exposed ports, DNS hygiene) and generates a branded PDF report.
+**Stack:** Next.js, TypeScript, Node.js, DNS lookups, PDF generation
+
+### ⛓️ Blockchain Audit Log for SMB Security Compliance
+A blockchain-based audit logging system that gives small businesses an immutable, tamper-evident record of security events — designed to help SMBs meet HIPAA / SOC 2 compliance without enterprise SIEM costs.
+**Stack:** Solidity, Hardhat, MetaMask, Alchemy
+
+*(See the [Projects section](https://luis-portfolio.vercel.app/#projects) of the site for the full list.)*
+
+---
+
+## Getting Started Locally
 
 ```bash
+# Clone
+git clone https://github.com/yourusername/luis-portfolio.git
+cd luis-portfolio
+
+# Install
 npm install
+
+# Run dev server
 npm run dev
 ```
 
@@ -21,100 +83,61 @@ Open [http://localhost:3000](http://localhost:3000).
 luis-portfolio/
 ├── app/
 │   ├── layout.tsx        # Root layout + SEO metadata
-│   ├── page.tsx          # Page — assembles sections
-│   ├── globals.css       # Global styles + CSS variables
+│   ├── page.tsx          # Page composition
+│   ├── globals.css       # Styles + CSS variables
 │   ├── sitemap.ts        # Auto-generated sitemap.xml
 │   └── robots.ts         # Auto-generated robots.txt
 │
-├── components/           # All section components
+├── components/
+│   ├── Navbar.tsx
+│   ├── Hero.tsx
+│   ├── About.tsx
+│   ├── Skills.tsx
+│   ├── Projects.tsx
+│   ├── Experience.tsx
+│   ├── Education.tsx
+│   ├── Contact.tsx
+│   └── Footer.tsx
+│
 ├── lib/
-│   └── data.ts           # ← All content lives here
+│   └── data.ts           # All site content
+│
 └── public/
-    ├── resume.pdf        # ← Your resume
-    └── favicon.ico       # ← Your favicon
+    └── resume.pdf
 ```
 
 ---
 
-## Editing Content
+## Customizing Content
 
-**All content lives in `lib/data.ts`.** Update that single file to change projects, skills, experience, education, or contact info.
-
----
-
-## Production Checklist
-
-Before going live, make sure:
-
-- [ ] `lib/data.ts` — replaced all `yourusername` placeholders with real handles
-- [ ] `public/resume.pdf` — your actual resume is in the `public/` folder
-- [ ] `public/favicon.ico` — your favicon is in `public/` (use [favicon.io](https://favicon.io) to generate one)
-- [ ] `app/layout.tsx` — update `siteUrl` to your real domain after Vercel assigns one
-- [ ] `app/sitemap.ts` and `app/robots.ts` — same domain update
-- [ ] Contact form — set up Formspree (see below) or leave it falling back to mailto
+Everything is in **`lib/data.ts`** — projects, skills, experience, education, and contact info. No hunting through components.
 
 ---
 
-## Working Contact Form (Formspree)
-
-The contact form uses [Formspree](https://formspree.io) (free, no backend needed).
-
-1. Sign up at [formspree.io](https://formspree.io)
-2. Create a new form → copy the endpoint URL (looks like `https://formspree.io/f/xyzabc123`)
-3. Locally: copy `.env.example` to `.env.local` and paste the endpoint
-4. On Vercel: add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` as an environment variable in project settings
-
-Without Formspree configured, the form falls back to opening the user's email client with prefilled content — still functional, just less polished.
-
----
-
-## Deploying to Vercel
-
-### Option A — Connect GitHub (recommended)
-
-1. Push your code to a GitHub repo
-2. Go to [vercel.com](https://vercel.com) → click **Add New → Project**
-3. Import your repo → Vercel auto-detects Next.js
-4. Add `NEXT_PUBLIC_FORMSPREE_ENDPOINT` under Environment Variables (optional)
-5. Click **Deploy** — done in ~60 seconds
-
-Every push to `main` auto-deploys.
-
-### Option B — Vercel CLI
+## Build & Deploy
 
 ```bash
-npm i -g vercel
-vercel
-```
-
-Follow the prompts.
-
-### Custom Domain
-
-1. Buy a domain (Namecheap, Cloudflare, etc.)
-2. In your Vercel project: **Settings → Domains → Add**
-3. Update DNS records as Vercel instructs
-4. Update `siteUrl` in `app/layout.tsx`, `app/sitemap.ts`, `app/robots.ts`
-5. Push the change
-
----
-
-## Verifying Build Before Deploy
-
-```bash
+# Production build (verify before pushing)
 npm run build
+
+# Start production server locally
 npm run start
 ```
 
-If `npm run build` completes without errors, Vercel will deploy successfully.
+Connected to Vercel via GitHub — every push to `main` auto-deploys.
 
 ---
 
-## Tech Stack
+## Contact
 
-- **Framework:** Next.js 15 (App Router)
-- **Language:** TypeScript
-- **Styling:** Tailwind CSS + CSS modules
-- **Icons:** Lucide React
-- **Hosting:** Vercel
-- **Form Handling:** Formspree (or mailto fallback)
+- **Email:** [luis@nodelinktechnologies.com](mailto:luis@nodelinktechnologies.com)
+- **LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+- **Location:** Tampa, Florida
+
+Open to junior software developer, cloud, and cybersecurity roles. Reach out via the form on the site or directly by email.
+
+---
+
+## License
+
+Personal portfolio — feel free to use the structure as inspiration, but please don't copy content directly. ✌️
