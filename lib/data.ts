@@ -83,7 +83,6 @@ export const projects: Project[] = [
     description:
       "A curated library of PowerShell and Python scripts built for real MSP support scenarios: automated software deployment, endpoint health checks, scheduled maintenance, disk and memory monitoring, and troubleshooting workflows. Used inside NodeLink Technologies' daily operations and integrated with Atera RMM — not just written for GitHub, actually run in production.",
     tech: ["PowerShell", "Python", "Windows Server", "Atera RMM", "Task Scheduler"],
-    githubUrl: "https://github.com/yourusername/it-automation-scripts",
   },
   {
     number: "04",
@@ -92,7 +91,6 @@ export const projects: Project[] = [
     description:
       "A series of hands-on AWS labs covering production-grade architecture patterns: VPC design with public/private subnets, IAM least-privilege roles and policies, EC2 with Auto Scaling groups and Application Load Balancers, CloudWatch dashboards with custom alarms, and RDS deployment with Multi-AZ configurations. Each lab includes architecture diagrams and step-by-step documentation.",
     tech: ["AWS EC2", "VPC & Subnets", "IAM", "CloudWatch", "Auto Scaling", "RDS"],
-    githubUrl: "https://github.com/yourusername/aws-cloud-labs",
   },
 ];
 
