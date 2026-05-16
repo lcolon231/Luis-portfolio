@@ -50,7 +50,7 @@ export type Project = {
   tagline: string;
   description: string;
   tech: string[];
-  githubUrl: string;
+  githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
 };
