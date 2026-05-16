@@ -131,7 +131,7 @@ Connected to Vercel via GitHub — every push to `main` auto-deploys.
 ## Contact
 
 - **Email:** [luis@nodelinktechnologies.com](mailto:luis@nodelinktechnologies.com)
-- **LinkedIn:** [linkedin.com/in/yourusername](https://linkedin.com/in/yourusername)
+- **LinkedIn:** [https://www.linkedin.com/in/luiscolon31/](https://www.linkedin.com/in/luiscolon31/)
 - **Location:** Tampa, Florida
 
 Open to junior software developer, cloud, and cybersecurity roles. Reach out via the form on the site or directly by email.
