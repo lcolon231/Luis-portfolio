@@ -112,18 +112,35 @@ export const experience = {
   ],
 };
 
-export const education = {
-  degree: "Master of Science in Information Technology",
-  school: "University of West Florida",
-  detail: "Expected Completion: 2026",
-  status: "In Progress",
-  courses: [
-    "Cloud Computing",
-    "Cybersecurity Fundamentals",
-    "Network Security",
-    "Database Management",
-    "IT Project Management",
-    "Systems Analysis",
-    "Research Methods",
-  ],
-};
+export const education = [
+  {
+    degree: "Master of Science in Information Technology",
+    school: "University of West Florida",
+    detail: "Expected Completion: 2026",
+    status: "In Progress",
+    courses: [
+      "Cloud Computing",
+      "Cybersecurity Fundamentals",
+      "Network Security",
+      "Database Management",
+      "IT Project Management",
+      "Systems Analysis",
+      "Research Methods",
+    ],
+  },
+  {
+    degree: "Bachelor of Science in Information Technology",
+    school: "NUC University — Puerto Rico",
+    detail: "Minor in Software Analysis & Development",
+    status: "Completed",
+    courses: [
+      "Software Development",
+      "Systems Analysis",
+      "Database Design",
+      "Network Technology",
+      "Web Development",
+      "Computer Applications",
+      "IT Project Management",
+    ],
+  },
+];
