@@ -17,7 +17,7 @@ export default function Footer() {
       }}>
         <p style={{ color: "#333", fontSize: "0.82rem" }}>
           Built by <span style={{ color: "var(--purple)" }}>{siteConfig.name}</span>
-          &nbsp;·&nbsp; {siteConfig.location} &nbsp;·&nbsp; 2025
+          &nbsp;·&nbsp; {siteConfig.location} &nbsp;·&nbsp; 2026
         </p>
         <div style={{ display: "flex", gap: "20px" }}>
           {links.map((link) => (

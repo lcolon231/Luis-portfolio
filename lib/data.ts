@@ -53,11 +53,31 @@ export type Project = {
   githubUrl?: string;
   liveUrl?: string;
   featured?: boolean;
+  keyFeatures?: string[];
+  learned?: string;
 };
 
 export const projects: Project[] = [
   {
     number: "01",
+    title: "ClientPulse",
+    tagline: "Multi-tenant MSP monitoring dashboard with database-level security",
+    description:
+      "A production-ready SaaS dashboard for Managed Service Providers (MSPs) to monitor client health, ticket queues, and SLA metrics through a centralized pane. Data isolation is strictly enforced at the database layer using PostgreSQL Row-Level Security (RLS), ensuring robust multi-tenancy. Built with a modern stack featuring schema-first validation, automated CSV parsing, and secure PKCE authentication flows.",
+    tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL RLS", "Prisma", "Tailwind CSS", "Zod"],
+    githubUrl: "https://github.com/lcolon231/Clientpulse",
+    featured: true,
+    keyFeatures: [
+      "Multi-tenant architecture with Postgres Row-Level Security (RLS)",
+      "Real-time client health monitoring (Devices, Tickets, Backups)",
+      "SLA metric tracking and enforcement",
+      "Secure authentication via Supabase (PKCE flow)",
+      "Schema-first validation with Zod and Prisma",
+    ],
+    learned: "Deepened expertise in implementing multi-tenancy at the database layer using RLS and managing complex state with React Hook Form and Zod.",
+  },
+  {
+    number: "02",
     title: "NodeLink SMB Security Posture Scanner",
     tagline: "Automated external threat surface analysis for small businesses",
     description:
@@ -66,9 +86,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/lcolon231/nodelink-security-scanner",
     liveUrl: "https://nodelink-security-scanner.vercel.app/",
     featured: true,
+    keyFeatures: [
+      "Automated DNS security audits (SPF, DKIM, DMARC)",
+      "SSL/TLS configuration and certificate validation",
+      "Network port scanning and service identification",
+      "Automated PDF report generation with risk scoring",
+      "Lead-generation workflow for MSP services",
+    ],
+    learned: "Mastered automated security scanning techniques and PDF generation within a Next.js server-side environment.",
   },
   {
-    number: "02",
+    number: "03",
     title: "Blockchain Audit Log for SMB Security Compliance",
     tagline: "Tamper-proof audit logging powered by smart contracts",
     description:
@@ -77,7 +105,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/lcolon231/Nodelink-audit-log",
   },
   {
-    number: "03",
+    number: "04",
     title: "IT Automation Script Library",
     tagline: "Production-tested operational tooling for MSP endpoint management",
     description:
@@ -85,7 +113,7 @@ export const projects: Project[] = [
     tech: ["PowerShell", "Python", "Windows Server", "Atera RMM", "Task Scheduler"],
   },
   {
-    number: "04",
+    number: "05",
     title: "AWS Cloud Architecture Labs",
     tagline: "Documented hands-on cloud infrastructure design and deployment",
     description:

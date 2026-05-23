@@ -105,6 +105,29 @@ export default function Projects() {
                 <p style={{ color: "#555", fontSize: "0.88rem", lineHeight: 1.78, marginBottom: "18px", maxWidth: "680px" }}>
                   {project.description}
                 </p>
+
+                {project.keyFeatures && (
+                  <div style={{ marginBottom: "18px" }}>
+                    <p style={{ color: "var(--text)", fontSize: "0.75rem", fontWeight: 700, marginBottom: "8px", textTransform: "uppercase", letterSpacing: "0.05em" }}>Key Features</p>
+                    <ul style={{ paddingLeft: "18px", margin: 0 }}>
+                      {project.keyFeatures.map((feature, idx) => (
+                        <li key={idx} style={{ color: "#666", fontSize: "0.82rem", marginBottom: "4px", lineHeight: 1.5 }}>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {project.learned && (
+                  <div style={{ marginBottom: "22px", padding: "12px 16px", background: "rgba(0,0,0,0.02)", borderRadius: "8px", borderLeft: "3px solid var(--purple)" }}>
+                    <p style={{ color: "var(--purple)", fontSize: "0.72rem", fontWeight: 700, marginBottom: "4px", textTransform: "uppercase" }}>What I Learned</p>
+                    <p style={{ color: "#555", fontSize: "0.82rem", fontStyle: "italic", margin: 0 }}>
+                      &ldquo;{project.learned}&rdquo;
+                    </p>
+                  </div>
+                )}
+
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "7px" }}>
                   {project.tech.map((t) => (
                     <span key={t} style={{
