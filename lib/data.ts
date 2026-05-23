@@ -64,7 +64,6 @@ export const projects: Project[] = [
     description:
       "A production-ready SaaS dashboard for Managed Service Providers (MSPs) to monitor client health, ticket queues, and SLA metrics through a centralized pane. Data isolation is strictly enforced at the database layer using PostgreSQL Row-Level Security (RLS), ensuring robust multi-tenancy. Built with a modern stack featuring schema-first validation, automated CSV parsing, and secure PKCE authentication flows.",
     tech: ["Next.js", "TypeScript", "Supabase", "PostgreSQL RLS", "Prisma", "Tailwind CSS", "Zod"],
-    githubUrl: "https://github.com/lcolon231/Clientpulse",
     featured: true,
     keyFeatures: [
       "Multi-tenant architecture with Postgres Row-Level Security (RLS)",
