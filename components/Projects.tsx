@@ -119,15 +119,6 @@ export default function Projects() {
                   </div>
                 )}
 
-                {project.learned && (
-                  <div style={{ marginBottom: "22px", padding: "12px 16px", background: "rgba(0,0,0,0.02)", borderRadius: "8px", borderLeft: "3px solid var(--purple)" }}>
-                    <p style={{ color: "var(--purple)", fontSize: "0.72rem", fontWeight: 700, marginBottom: "4px", textTransform: "uppercase" }}>What I Learned</p>
-                    <p style={{ color: "#555", fontSize: "0.82rem", fontStyle: "italic", margin: 0 }}>
-                      &ldquo;{project.learned}&rdquo;
-                    </p>
-                  </div>
-                )}
-
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "7px" }}>
                   {project.tech.map((t) => (
                     <span key={t} style={{

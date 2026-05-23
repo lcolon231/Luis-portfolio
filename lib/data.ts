@@ -54,7 +54,6 @@ export type Project = {
   liveUrl?: string;
   featured?: boolean;
   keyFeatures?: string[];
-  learned?: string;
 };
 
 export const projects: Project[] = [
@@ -74,7 +73,6 @@ export const projects: Project[] = [
       "Secure authentication via Supabase (PKCE flow)",
       "Schema-first validation with Zod and Prisma",
     ],
-    learned: "Deepened expertise in implementing multi-tenancy at the database layer using RLS and managing complex state with React Hook Form and Zod.",
   },
   {
     number: "02",
@@ -93,7 +91,6 @@ export const projects: Project[] = [
       "Automated PDF report generation with risk scoring",
       "Lead-generation workflow for MSP services",
     ],
-    learned: "Mastered automated security scanning techniques and PDF generation within a Next.js server-side environment.",
   },
   {
     number: "03",
@@ -103,22 +100,6 @@ export const projects: Project[] = [
       "A blockchain-based audit logging system that gives small businesses an immutable, verifiable record of security-relevant events - login attempts, permission changes, configuration updates, and data access. Each even is hashed and written to an Ethereum smart contract, making the audit cryptographically tamper-evident even from privileged insiders. Designed to help SMBs meet compliance requirements (HIPAA, SOC 2) without the cost of enterprise SIEM platforms",
     tech: ["Solidity", "Hardhat", "MetaMask", "Alchemy"],
     githubUrl: "https://github.com/lcolon231/Nodelink-audit-log",
-  },
-  {
-    number: "04",
-    title: "IT Automation Script Library",
-    tagline: "Production-tested operational tooling for MSP endpoint management",
-    description:
-      "A curated library of PowerShell and Python scripts built for real MSP support scenarios: automated software deployment, endpoint health checks, scheduled maintenance, disk and memory monitoring, and troubleshooting workflows. Used inside NodeLink Technologies' daily operations and integrated with Atera RMM — not just written for GitHub, actually run in production.",
-    tech: ["PowerShell", "Python", "Windows Server", "Atera RMM", "Task Scheduler"],
-  },
-  {
-    number: "05",
-    title: "AWS Cloud Architecture Labs",
-    tagline: "Documented hands-on cloud infrastructure design and deployment",
-    description:
-      "A series of hands-on AWS labs covering production-grade architecture patterns: VPC design with public/private subnets, IAM least-privilege roles and policies, EC2 with Auto Scaling groups and Application Load Balancers, CloudWatch dashboards with custom alarms, and RDS deployment with Multi-AZ configurations. Each lab includes architecture diagrams and step-by-step documentation.",
-    tech: ["AWS EC2", "VPC & Subnets", "IAM", "CloudWatch", "Auto Scaling", "RDS"],
   },
 ];
 
